@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LoginRequest;
+use App\Services\UserServices;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Validation\ValidationException;
-use Illuminate\Support\Facades\Password;
 
 class LoginController extends Controller
 {
@@ -19,31 +18,20 @@ class LoginController extends Controller
         return view('auth.login');
     }
 
-    public function login(Request $request)
+    public function login(LoginRequest $request)
     {
-        $credentials = $request->validate([
-            'email' => ['required', 'email'],
-            'password' => ['required'],
-        ]);
-
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+        if (UserServices::login($request)) {
             $request->session()->regenerate();
-
             return redirect()->intended('dashboard');
         }
-
         return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
+            'email' => 'As credenciais fornecidas não correspondem aos nossos registros.',
         ]);
     }
 
     public function logout(Request $request)
     {
-        Auth::logout();
-
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-
+        UserServices::logout($request);
         return redirect('/login');
     }
 }
