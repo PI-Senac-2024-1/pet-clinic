@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 // use App\Http\Requests\RegisterRequest;
 
 use App\Http\Requests\UsersRequest;
-use App\Models\User;
+use App\Services\UserServices;
 
 class RegisterController extends Controller
 {
@@ -14,9 +14,9 @@ class RegisterController extends Controller
         return view('auth.register');
     }
 
-    public function store(UsersRequest $user)
+    public function store(UsersRequest $request)
     {
-        
+        UserServices::register($request->all());
 
         return redirect('/dashboard');
     }

@@ -19,7 +19,6 @@
     <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="assets/css/argon-dashboard.css" rel="stylesheet" />
-    <script src="{{ asset('assets/js/script.js') }}"></script>
 </head>
 
 <body class="{{ $class ?? '' }}">
@@ -65,6 +64,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{ asset('assets/js/argon-dashboard.js') }}"></script>
+    <script src="{{ asset('assets/js/script.js') }}"></script>
     @stack('js');
 </body>
 
