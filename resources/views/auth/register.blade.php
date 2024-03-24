@@ -30,8 +30,12 @@
                                     @error('username') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
                                 </div>
                                 <div class="flex flex-col mb-3">
-                                    <input type="text" name="document" class="form-control" placeholder="CPF" aria-label="CPF" value="{{ old('document') }}" maxlength="14">
+                                    <input type="text" name="document" class="form-control document" placeholder="CPF" aria-label="CPF" value="{{ old('document') }}" maxlength="14">
                                     @error('document') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
+                                </div>
+                                <div class="flex flex-col mb-3">
+                                    <input type="text" name="phone" class="form-control phone" placeholder="Telefone" aria-label="Telefone" value="{{ old('phone') }}" maxlength="15">
+                                    @error('phone') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
                                 </div>
                                 <div class="flex flex-col mb-3">
                                     <input type="email" name="email" class="form-control" placeholder="E-mail" aria-label="E-mail" value="{{ old('email') }}" maxlength="255">
