@@ -1,11 +1,17 @@
 ## Como iniciar o projeto:
 
 1 - Duplicar o arquivo .env.example;
+
 2 - Renomear o arquivo duplicado para .env;
+
 3 - Executar o comando "php artisan key:generate";
+
 4 - Criar a base de dados "pet_clinic" no MySQL;
+
 5 - Executar o comando "composer install" no terminal (Se for Laragon usar o terminal que vem com ele) DENTRO DA PASTA DO PROJETO;
+
 6 - Executar o comando "php artisan migrate --seed";
+
 7 - Executar o comando "php artisan serve" (este comando inicia o servidor interno do Laravel).
 
 
