@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-2" href="{{ route('sign-up-company-static') }}">
+                    <a class="nav-link me-2" href="{{ route('sign-up-static') }}">
                         <i class="fas fa-user-circle opacity-6  me-1"></i>
                         Sign Up Company
                     </a>
@@ -121,18 +121,28 @@
                     <div class="card-body">
                         <form role="form">
                             <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Name" aria-label="Name">
+                                <input type="text" class="form-control" placeholder="Company Name" aria-label="Name">
                             </div>
                             <div class="mb-3">
-                                <input type="number" class="form-control" placeholder="CPF" aria-label="Name">
+                                <input type="number" class="form-control" placeholder="CNPJ" aria-label="Name">
                             </div>
                             <div class="mb-3">
                                 <input type="number" class="form-control" placeholder="Telephone" aria-label="Name">
                             </div>
                             <div class="mb-3">
-                                <input type="number" class="form-control" placeholder="Complete Address" aria-label="Name">
+                                <input type="text" class="form-control" placeholder="Complete Address" aria-label="Name">
+                            </div>
+
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Specialties" aria-label="Name">
                             </div>
                             <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Services Offered" aria-label="Name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Does the company offer home care?" aria-label="Name">
+                            </div>
+                           <div class="mb-3">
                                 <input type="email" class="form-control" placeholder="Email" aria-label="Email">
                             </div>
 
@@ -195,3 +205,4 @@
     </div>
 </footer>
 @endsection
+
