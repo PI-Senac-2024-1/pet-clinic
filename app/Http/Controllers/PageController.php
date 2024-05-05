@@ -45,4 +45,8 @@ class PageController extends Controller
     {
         return view("pages.sign-up-static");
     }
+    public function signupcompany()
+    {
+        return view("pages.sign-up-company-static");
+    }
 }
