@@ -21,8 +21,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function company()
     {
         return view('pages.dashboard');
+    }
+
+    public function user()
+    {
+        return view("pages.dashboard-user");
     }
 }
