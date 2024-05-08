@@ -1,197 +1,123 @@
 @extends('layouts.app', ['class' => 'g-sidenav-show bg-gray-100'])
 
 @section('content')
-    @include('layouts.navbars.auth.topnav', ['title' => 'Dashboard'])
-    <div class="container-fluid py-4">
-
-        <div class="row mt-4">
-            <div class="col-lg-7 mb-lg-0 mb-4">
-                <div class="card z-index-2 h-100">
-                    <div class="card-header pb-0 pt-3 bg-transparent">
-                        <h6 class="text-capitalize">Look a change</h6>
-                        <p class="text-sm mb-0">
-                            <i class="fa fa-arrow-up text-success"></i>
-                            <span class="font-weight-bold">4% more</span> in 2024
-                        </p>
-                    </div>
-                    <div class="card-body p-3">
-                        <div class="chart">
-                            <canvas id="chart-line" class="chart-canvas" height="300"></canvas>
-                        </div>
-                    </div>
+@include('layouts.navbars.auth.topnav', ['title' => 'Dashboard'])
+<div class="container-fluid py-4">
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Pet Shops</h5>
+                    <!-- Content for Pet Shops filter card -->
                 </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="card card-carousel overflow-hidden h-100 p-0">
-                    <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
-                        <div class="carousel-inner border-radius-lg h-100">
-                            <div class="carousel-item h-100 active" style="background-image: url('./img/carousel-1.jpg');
-            background-size: cover;">
-                                <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-                                    <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
-                                        <i class="ni ni-camera-compact text-dark opacity-10"></i>
-                                    </div>
-                                    <h5 class="text-white mb-1">Get started with Argon</h5>
-                                    <p>There’s nothing I really wanted to do in life that I wasn’t able to get good at.</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item h-100" style="background-image: url('./img/carousel-2.jpg');
-            background-size: cover;">
-                                <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-                                    <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
-                                        <i class="ni ni-bulb-61 text-dark opacity-10"></i>
-                                    </div>
-                                    <h5 class="text-white mb-1">Faster way to create web pages</h5>
-                                    <p>That’s my skill. I’m not really specifically talented at anything except for the
-                                        ability to learn.</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item h-100" style="background-image: url('./img/carousel-3.jpg');
-            background-size: cover;">
-                                <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-                                    <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
-                                        <i class="ni ni-trophy text-dark opacity-10"></i>
-                                    </div>
-                                    <h5 class="text-white mb-1">Share with us your design tips!</h5>
-                                    <p>Don’t be afraid to be wrong because you can’t learn anything from a compliment.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev w-5 me-3" type="button"
-                            data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next w-5 me-3" type="button"
-                            data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-
             </div>
         </div>
-        <div class="row mt-4">
-        <div class="col-lg-7 mb-lg-0">
-            <div class="card z-index-2 h-100 mb-4">
-                <div class="card-header card-header pb-0 pt-3 bg-transparent">
-                    Customer Reviews
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Hospitals</h5>
+                    <!-- Content for Hospitals filter card -->
                 </div>
-                <div class="card-body ">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Ótimo Atendimento!</h5>
-                            <p class="card-text">Excelente serviço prestado, estou muito satisfeito.</p>
-                            <p class="card-text">Assessment: 5/5</p>
-                        </div>
-                    </div>
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Precisa Melhorar</h5>
-                            <p class="card-text">Achei que o tempo de espera foi muito longo.</p>
-                            <p class="card-text">Assessment: 3/5</p>
-                        </div>
-                    </div>
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Excelente Produto!</h5>
-                            <p class="card-text">Produto de alta qualidade, recomendo a todos.</p>
-                            <p class="card-text">Assessment: 5/5</p>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Veterinarians</h5>
+                    <!-- Content for Veterinarians filter card -->
                 </div>
             </div>
         </div>
     </div>
-</div>
-        @include('layouts.footers.auth.footer')
+    <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="serviceModalLabel">Service Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Content will be dynamically populated here -->
+                    <div id="modalContent"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-@endsection
+    <div class="row mt-4">
+        <h2 class="display-5 mt-6 mb-4"> <strong> Top Rated Services </strong></h2>
+
+        @foreach($topRatedServices as $key => $service)
+        <div class="col-md-4 pb-4">
+            <div class="card card-profile" onclick="openModal(this, <?php echo htmlspecialchars(json_encode($service), ENT_QUOTES, 'UTF-8'); ?>)">
+                <div class="d-flex justify-content-center align-items-center card-img-top" style="height: 200px; overflow:hidden">
+                    <img src="{{ $service['image'] }}" alt="Image placeholder" class="img-fluid">
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4 col-lg-4 order-lg-2">
+                        <div class="mt-n4 mt-lg-n6 mb-4 mb-lg-0">
+                            <a href="javascript:;">
+                                <img src="{{ $service['avatar'] }}" class="rounded-circle img-fluid border border-2 border-white">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body pt-0">
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="d-grid text-center mx-4">
+                                    <span class="text-lg font-weight-bolder">{{ $service['reviews'] }}</span>
+                                    <span class="text-sm opacity-8">Reviews</span>
+                                </div>
+                                <!-- Star icon for rating -->
+                                <div class="d-grid text-center">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <span class="text-sm opacity-8">{{ $service['rating'] }}</span>
+                                </div>
+                                <!-- End star icon for rating -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <h5>{{ $service['name'] }}</h5>
+                        <div class="h6 font-weight-300">
+                            <i class="ni location_pin mr-2"></i>{{ $service['location'] }}
+                        </div>
+                        <label class="badge badge-pill badge-md bg-gradient-warning">
+                            {{ $service['category'] }}
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
+
+    </div>
+</div>
 
 @push('js')
-    <script src="./assets/js/plugins/chartjs.min.js"></script>
-    <script>
-        var ctx1 = document.getElementById("chart-line").getContext("2d");
+<script>
+    console.log('hey there!')
 
-        var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
-
-        gradientStroke1.addColorStop(1, 'rgba(251, 99, 64, 0.2)');
-        gradientStroke1.addColorStop(0.2, 'rgba(251, 99, 64, 0.0)');
-        gradientStroke1.addColorStop(0, 'rgba(251, 99, 64, 0)');
-        new Chart(ctx1, {
-            type: "line",
-            data: {
-                labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-                datasets: [{
-                    label: "Mobile apps",
-                    tension: 0.4,
-                    borderWidth: 0,
-                    pointRadius: 0,
-                    borderColor: "#fb6340",
-                    backgroundColor: gradientStroke1,
-                    borderWidth: 3,
-                    fill: true,
-                    data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
-                    maxBarThickness: 6
-
-                }],
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        display: false,
-                    }
-                },
-                interaction: {
-                    intersect: false,
-                    mode: 'index',
-                },
-                scales: {
-                    y: {
-                        grid: {
-                            drawBorder: false,
-                            display: true,
-                            drawOnChartArea: true,
-                            drawTicks: false,
-                            borderDash: [5, 5]
-                        },
-                        ticks: {
-                            display: true,
-                            padding: 10,
-                            color: '#fbfbfb',
-                            font: {
-                                size: 11,
-                                family: "Open Sans",
-                                style: 'normal',
-                                lineHeight: 2
-                            },
-                        }
-                    },
-                    x: {
-                        grid: {
-                            drawBorder: false,
-                            display: false,
-                            drawOnChartArea: false,
-                            drawTicks: false,
-                            borderDash: [5, 5]
-                        },
-                        ticks: {
-                            display: true,
-                            color: '#ccc',
-                            padding: 20,
-                            font: {
-                                size: 11,
-                                family: "Open Sans",
-                                style: 'normal',
-                                lineHeight: 2
-                            },
-                        }
-                    },
-                },
-            },
-        });
-    </script>
+    function openModal(card, serviceData) {
+        console.log(card, serviceData)
+        var modalContent = document.getElementById('modalContent');
+        modalContent.innerHTML = `
+            <h5>${serviceData.name}</h5>
+            <p>Location: ${serviceData.location}</p>
+            <p>Category: ${serviceData.category}</p>
+            <p>Rating: ${serviceData.rating}</p>
+            <p>Reviews: ${serviceData.reviews}</p>
+        `;
+        var modal = new bootstrap.Modal(document.getElementById('serviceModal'));
+        modal.show();
+    }
+</script>
 @endpush
+
+@include('layouts.footers.auth.footer')
+@endsection
