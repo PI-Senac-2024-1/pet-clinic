@@ -30,7 +30,7 @@
         </div>
     </div>
     <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog" style="max-width:800px">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="serviceModalLabel">Service Details</h5>
@@ -104,14 +104,59 @@
     console.log('hey there!')
 
     function openModal(card, serviceData) {
-        console.log(card, serviceData)
         var modalContent = document.getElementById('modalContent');
         modalContent.innerHTML = `
-            <h5>${serviceData.name}</h5>
-            <p>Location: ${serviceData.location}</p>
-            <p>Category: ${serviceData.category}</p>
-            <p>Rating: ${serviceData.rating}</p>
-            <p>Reviews: ${serviceData.reviews}</p>
+        <div class="d-flex justify-content-center align-items-center card-img-top" style="height: 200px; overflow:hidden">
+                    <img src=${ serviceData.image } alt="Image placeholder" class="img-fluid">
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4 col-lg-4 order-lg-2">
+                        <div class="mt-n4 mt-lg-n6 mb-4 mb-lg-0">
+                            <a href="javascript:;">
+                                <img src=${ serviceData.avatar } class="rounded-circle img-fluid border border-2 border-white">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body pt-0">
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="d-grid text-center mx-4">
+                                    <span class="text-lg font-weight-bolder">${serviceData.reviews }</span>
+                                    <span class="text-sm opacity-8">Reviews</span>
+                                </div>
+                                <!-- Star icon for rating -->
+                                <div class="d-grid text-center">
+                                    <i class="fas fa-star text-warning"></i>
+                                    <span class="text-sm opacity-8">${ serviceData.rating }</span>
+                                </div>
+                                <!-- End star icon for rating -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <h5>${ serviceData.name }</h5>
+                        <div class="h6 font-weight-300">
+                            <i class="ni location_pin mr-2"></i>${ serviceData.location }
+                        </div>
+                        <label class="badge badge-pill badge-md bg-gradient-warning">
+                            ${serviceData.category}
+                        </label>
+                    </div>
+                </div>
+                <h5>Reviews:</h5>
+            <div>
+                ${serviceData.comments.map(review => `
+                    <div class="alert alert-light" role="alert">
+                        <strong>${review.user}: </strong>${review.text}
+                    </div>`
+                ).join('')}
+            </div>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Review" aria-describedby="button-addon4">
+                <button type="button" class="btn bg-gradient-warning" style="margin: 0">Submit your Review</button>
+            </div>
         `;
         var modal = new bootstrap.Modal(document.getElementById('serviceModal'));
         modal.show();
