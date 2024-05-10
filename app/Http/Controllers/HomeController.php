@@ -43,7 +43,7 @@ class HomeController extends Controller
                 ],
             ],
             [
-                'name' => 'Petz',
+                'name' => 'Patas & Co.',
                 'image' => '/img/petshop2.jpg',
                 'avatar' => '/img/vet5.png',
                 'reviews' => 65,
@@ -70,7 +70,7 @@ class HomeController extends Controller
                 ],
             ],
             [
-                'name' => 'Petz',
+                'name' => 'Pelo Pet',
                 'image' => '/img/petshop4.jpg',
                 'avatar' => '/img/vet6.png',
                 'reviews' => 74,
