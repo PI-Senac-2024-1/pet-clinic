@@ -25,8 +25,12 @@ class HomeController extends Controller
     {
         return view('pages.dashboard');
     }
+    public function userProfile()
+    {
+        return view('pages.user-profile');
+    }
 
-    public function user()
+    public function userDashboard()
     {
         $topRatedServices = [
             [
