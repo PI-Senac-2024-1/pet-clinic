@@ -40,7 +40,6 @@ use App\Http\Controllers\ChangePassword;
 
 
 Route::get('/', function () {return redirect('/dashboard');})->middleware('auth');
-Route::get('/user-profile', [HomeController::class,'userProfile'])->name('user-profile');
 	Route::get('/register', [RegisterController::class, 'create'])->middleware('guest')->name('register');
 	Route::post('/register', [RegisterController::class, 'store'])->middleware('guest')->name('register.perform');
 	Route::get('/login', [LoginController::class, 'show'])->middleware('guest')->name('login');
@@ -54,6 +53,8 @@ Route::get('/user-profile', [HomeController::class,'userProfile'])->name('user-p
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [HomeController::class, 'company'])->name('home');
     Route::get('/user-dashboard', [HomeController::class, 'user'])->name('user-dashboard');
+    Route::get('/user-profile', [UserProfileController::class,'edit'])->name('user-profile-edit');
+    Route::post('/user-profile', [UserProfileController::class,'update'])->name('user-profile-update');
 	// Route::get('/virtual-reality', [PageController::class, 'vr'])->name('virtual-reality');
 	// Route::get('/rtl', [PageController::class, 'rtl'])->name('rtl');
 	Route::get('/profile', [UserProfileController::class, 'show'])->name('profile');
