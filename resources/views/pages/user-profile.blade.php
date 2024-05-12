@@ -74,7 +74,7 @@
                                 <div class="form-group">
                                     <label for="street" class="form-control-label">Endereço</label>
                                     <input class="form-control" type="text" name="street" id="street"
-                                        value="{{ old('street', $user->street) }}" required readonly>
+                                        value="{{ old('street', !empty($user->adress) ? $user->adress->street : '') }}" required readonly>
                                         @error('street') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
                                 </div>
                             </div>
@@ -88,28 +88,28 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="district" class="form-control-label">Estado</label>
-                                    <input class="form-control" type="text" name="district" id="district" value="{{ old('district', $user->district) }}" required readonly>
+                                    <input class="form-control" type="text" name="district" id="district" value="{{ old('district', !empty($user->adress) ? $user->adress->district : '') }}" required readonly>
                                     @error('district') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="city" class="form-control-label">Cidade</label>
-                                    <input class="form-control" type="text" name="city" id="city" value="{{ old('city', $user->city) }}" required readonly>
+                                    <input class="form-control" type="text" name="city" id="city" value="{{ old('city', !empty($user->adress) ? $user->adress->city : '') }}" required readonly>
                                     @error('city') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="state" class="form-control-label">Estado</label>
-                                    <input class="form-control" type="text" name="state" id="state" value="{{ old('state', $user->state) }}" required readonly>
+                                    <input class="form-control" type="text" name="state" id="state" value="{{ old('state', !empty($user->adress) ? $user->adress->state : '') }}" required readonly>
                                     @error('state') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="zipcode" class="form-control-label">CEP</label>
-                                    <input class="form-control zipcode" type="text" name="zipcode" id="zipcode" value="{{ old('zipcode', $user->zipcode) }}" required maxlength="9">
+                                    <input class="form-control zipcode" type="text" name="zipcode" id="zipcode" value="{{ old('zipcode', !empty($user->adress) ? $user->adress->zipcode : '') }}" required maxlength="9">
                                     @error('zipcode') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
                                 </div>
                             </div>

@@ -67,7 +67,7 @@ class User extends Authenticatable
 
     public function adress()
     {
-        return $this->hasOne(Adress::class);
+        return $this->belongsTo(Adress::class);
     }
 
     public function rate()
