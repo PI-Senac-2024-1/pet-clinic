@@ -17,4 +17,9 @@ class Adress extends Model
         'state',
         'country',
     ];
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }

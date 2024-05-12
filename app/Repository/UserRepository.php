@@ -16,4 +16,32 @@ class UserRepository
         return User::create($data);
 
     }
+
+    /**
+     * Retorna o usuário com base no ID recebido
+     * @param int $idUser
+     * @return User $user
+     */
+    public static function findUSer(int $idUser): User
+    {
+        return User::find($idUser);
+    }
+
+    /**
+     * Atualiza o usuário recebido
+     * @param array $data
+     * @return void
+     */
+    public static function updateUser(array $data): Void
+    {
+        User::where('id', $data['id'])->update([
+            'username' => $data['username'],
+            'email' => $data['email'],
+            'document' => $data['document'],
+            'number' => $data['number'],
+            'phone' => $data['phone'],
+            'adress_id' => $data['adress_id'],
+            'complement' => $data['complement'],
+        ]);
+    }
 }

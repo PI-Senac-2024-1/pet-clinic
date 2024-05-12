@@ -11,10 +11,14 @@ function clearInputs() {
 function callback(conteudo) {
     if (!("erro" in conteudo)) {
         //Atualiza os campos com os valores.
-        document.getElementById(`street${identifyInput}`).value=(conteudo.logradouro);
-        document.getElementById(`district${identifyInput}`).value=(conteudo.bairro);
-        document.getElementById(`city${identifyInput}`).value=(conteudo.localidade);
-        document.getElementById(`state${identifyInput}`).value=(conteudo.uf);
+        document.getElementById(`street${identifyInput}`).value=(conteudo.logradouro)
+        document.getElementById(`street${identifyInput}`).readOnly = conteudo.logradouro != ''
+        document.getElementById(`district${identifyInput}`).value=(conteudo.bairro)
+        document.getElementById(`district${identifyInput}`).readOnly = conteudo.bairro != ''
+        document.getElementById(`city${identifyInput}`).value=(conteudo.localidade)
+        document.getElementById(`city${identifyInput}`).readOnly = conteudo.localidade != ''
+        document.getElementById(`state${identifyInput}`).value=(conteudo.uf)
+        document.getElementById(`state${identifyInput}`).readOnly = conteudo.uf != ''
 
     } //end if.
     else {
@@ -28,7 +32,6 @@ document.getElementById('zipcode').addEventListener('change', function(event){
     //Nova variável "cep" somente com dígitos.
     var cep = event.target.value.replace(/\D/g, '');
     identifyInput = event.target.id.replace("zipcode", "");
-    console.log(identifyInput);
 
     //Verifica se campo cep possui valor informado.
     if (cep != "") {

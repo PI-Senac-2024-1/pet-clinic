@@ -25,11 +25,9 @@ class User extends Authenticatable
         'password',
         'document',
         'phone',
-        'address',
-        'city',
-        'country',
-        'postal',
-        'about'
+        'number',
+        'complement',
+        'adress_id',
     ];
 
     /**
@@ -63,5 +61,17 @@ class User extends Authenticatable
     }
 
     public function company()
-    {}
+    {
+        return $this->hasOne(Company::class);
+    }
+
+    public function adress()
+    {
+        return $this->hasOne(Adress::class);
+    }
+
+    public function rate()
+    {
+        return $this->hasMny(Pointing::class);
+    }
 }

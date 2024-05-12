@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('district');
             $table->string('city');
             $table->string('state');
-            $table->string('country');
+            $table->string('country')->default('Brasil');
             $table->timestamps();
         });
     }

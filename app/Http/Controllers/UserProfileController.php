@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UsersRequest;
 use App\Models\User;
+use App\Repository\UserRepository;
+use App\Services\UserServices;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\View\View;
@@ -46,13 +49,12 @@ class UserProfileController extends Controller
     public function edit(): View
     {
         return view('pages.user-profile', [
-            'user' => User::find(auth()->user()->id)
+            'user' => UserRepository::findUSer(auth()->user()->id)
         ]);
     }
 
-    public function update(Request $request): View
+    public function update(UsersRequest $request): View
     {
-        dd($request->all());
-        return view('pages.user-profile');
+        return UserServices::update($request->except(['_token', '_method']));
     }
 }

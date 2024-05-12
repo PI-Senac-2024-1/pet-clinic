@@ -15,4 +15,14 @@ class Pointing extends Model
         'user_id',
         'company_id'
     ];
+
+    public function user()
+    {
+        return $this->hasOne(User::class);
+    }
+
+    public function company()
+    {
+        return $this->hasOne(Company::class);
+    }
 }

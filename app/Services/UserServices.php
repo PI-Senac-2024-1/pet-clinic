@@ -2,9 +2,11 @@
 
 namespace App\Services;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Repository\UserRepository;
+use Illuminate\View\View;
 
 class UserServices
 {
@@ -39,5 +41,20 @@ class UserServices
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();
+    }
+
+    /**
+     * Atualiza os dados do usuário
+     * @param array $data
+     * @return view
+     */
+    public static function update(array $data): View
+    {
+        $data['id'] = auth()->user()->id;
+        $data['adress_id'] = AdressServices::updateOrCreate($data)->id;
+        UserRepository::updateUser($data);
+        return view('pages.user-profile', [
+            'user' => UserRepository::findUSer(auth()->user()->id)
+        ]);
     }
 }
