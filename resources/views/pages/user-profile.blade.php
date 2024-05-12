@@ -116,7 +116,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="complement">Complemento</label>
-                                    <textarea class="form-control" id="complement" name="complement" rows="3"></textarea>
+                                    <textarea class="form-control" id="complement" name="complement" rows="3">{{trim($user->complement)}}</textarea>
                                 </div>
                             </div>
                             <div class="col-md-4">

@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\User;
+use App\Repository\AdressRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Repository\UserRepository;
@@ -17,6 +18,7 @@ class UserServices
      */
     public static function register(array $data): void
     {
+        $data['adress_id'] = AdressRepository::updateOrCreate($data)->id;
         auth()->login(UserRepository::createUser($data));
     }
 

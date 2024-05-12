@@ -37,7 +37,7 @@ class UsersRequest extends FormRequest
             'username' => 'required|max:255|min:2',
             'document' => 'required|max:14|min:11',
             'email' => 'required|email|max:255|unique:users,email',
-            'password' => 'required|email|max:255|unique:users,email',
+            'password' => 'required|min:5|max:255',
             'terms' => 'required',
             'zipcode' => 'required',
             'street' => 'required',

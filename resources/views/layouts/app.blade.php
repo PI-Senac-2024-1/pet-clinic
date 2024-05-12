@@ -25,26 +25,28 @@
 <body class="{{ $class ?? '' }}">
 
     @guest
-    @yield('content')
+        @yield('content')
     @endguest
 
     @auth
-    @if (in_array(request()->route()->getName(), ['sign-in-static', 'sign-up-static', 'login', 'register', 'recover-password', 'rtl', 'virtual-reality']))
-    @yield('content')
-    @else
-    @if (!in_array(request()->route()->getName(), ['user-profile', 'profile-static']))
-    <div class="min-height-300 bg-primary position-absolute w-100"></div>
-    @elseif (in_array(request()->route()->getName(), ['profile-static', 'user-profile']))
-    <div class="position-absolute w-100 min-height-300 top-0" style="background-image: url('https://images.unsplash.com/photo-1546238232-20216dec9f72?q=80&w=1468&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-position-y: 60%;">
-        <span class="mask bg-primary opacity-6"></span>
-    </div>
-    @endif
-    @include('layouts.navbars.auth.sidenav')
-    <main class="main-content border-radius-lg">
-        @yield('content')
-    </main>
-    @include('components.fixed-plugin')
-    @endif
+        @if (in_array(request()->route()->getName(), ['sign-in-static', 'sign-up-static', 'login', 'register', 'recover-password', 'rtl', 'virtual-reality']))
+            @yield('content')
+        @endif
+        @if (!in_array(request()->route()->getName(), ['sign-in-static', 'sign-up-static', 'login', 'register', 'recover-password', 'rtl', 'virtual-reality']))
+            @if (!in_array(request()->route()->getName(), ['user-profile', 'profile-static']))
+                <div class="min-height-300 bg-primary position-absolute w-100"></div>
+            @endif
+            @if (in_array(request()->route()->getName(), ['profile-static', 'user-profile']))
+                <div class="position-absolute w-100 min-height-300 top-0" style="background-image: url('https://images.unsplash.com/photo-1546238232-20216dec9f72?q=80&w=1468&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-position-y: 60%;">
+                    <span class="mask bg-primary opacity-6"></span>
+                </div>
+            @endif
+            @include('layouts.navbars.auth.sidenav')
+            <main class="main-content border-radius-lg">
+                @yield('content')
+            </main>
+            @include('components.fixed-plugin')
+        @endif
     @endauth
 
     <!--   Core JS Files   -->
