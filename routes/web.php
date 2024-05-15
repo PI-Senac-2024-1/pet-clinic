@@ -37,7 +37,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\ResetPassword;
 use App\Http\Controllers\ChangePassword;
-
+use App\Http\Controllers\CompanyController;
 
 Route::get('/', function () {return redirect('/dashboard');})->middleware('auth');
 	Route::get('/register', [RegisterController::class, 'create'])->middleware('guest')->name('register');
@@ -53,7 +53,8 @@ Route::get('/', function () {return redirect('/dashboard');})->middleware('auth'
 	Route::get('/sign-up-static', [PageController::class, 'signup'])->name('sign-up-static');
     Route::get('/sign-up-company-static', [PageController::class, 'signupcompany'])->name('sign-up-company-static');
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/dashboard', [HomeController::class, 'company'])->name('home');
+    Route::get('/dashboard', [UserProfileController::class, 'index'])->name('home-user');
+    Route::get('/dashboard-company', [CompanyController::class, 'index'])->name('home-company');
     Route::get('/user-dashboard', [UserProfileController::class, 'userDashboard'])->name('user-dashboard');
     Route::get('/user-profile', [UserProfileController::class,'edit'])->name('user-profile-edit');
     Route::put('/user-profile', [UserProfileController::class,'update'])->name('user-profile-update');

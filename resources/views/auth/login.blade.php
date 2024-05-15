@@ -36,7 +36,7 @@
                                             <label class="form-check-label" for="rememberMe">Lembre de mim</label>
                                         </div>
                                         <div class="text-center">
-                                            <button type="submit" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Sign in</button>
+                                            <button type="submit" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Login</button>
                                         </div>
                                     </form>
                                 </div>

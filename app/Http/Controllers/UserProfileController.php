@@ -49,7 +49,7 @@ class UserProfileController extends Controller
     public function edit(): View
     {
         return view('pages.user-profile', [
-            'user' => UserRepository::findUSer(auth()->user()->id)
+            'user' => UserRepository::findUser(auth()->user()->id)
         ]);
     }
 
@@ -58,7 +58,7 @@ class UserProfileController extends Controller
         return UserServices::update($request->except(['_token', '_method']));
     }
 
-    public function userDashboard(): View
+    public function index(): View
     {
         return view("pages.dashboard-user", [
             'topRatedServices' => [

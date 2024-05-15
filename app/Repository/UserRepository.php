@@ -22,7 +22,7 @@ class UserRepository
      * @param int $idUser
      * @return User $user
      */
-    public static function findUSer(int $idUser): User
+    public static function findUser(int $idUser): User
     {
         return User::find($idUser);
     }
