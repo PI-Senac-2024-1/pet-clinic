@@ -19,8 +19,11 @@ class DatabaseSeeder extends Seeder
             'username' => 'admin',
             'firstname' => 'Admin',
             'lastname' => 'Admin',
-            'email' => 'admin@argon.com',
+            'email' => 'admin@petclinic.com',
             'password' => bcrypt('secret')
+        ]);
+        $this->call([
+            ServicesSeeder::class
         ]);
     }
 }
