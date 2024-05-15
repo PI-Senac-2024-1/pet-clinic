@@ -16,6 +16,7 @@ class Company extends Model
         'complement',
         'phone',
         'email',
-        'user_id'
+        'user_id',
+        'adress_id'
     ];
 }

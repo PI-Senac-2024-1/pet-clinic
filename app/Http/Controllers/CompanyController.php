@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Company;
+use App\Services\CompanyServices;
 use Illuminate\Http\Request;
 
 class CompanyController extends Controller
@@ -20,7 +21,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.create-company');
     }
 
     /**
@@ -28,38 +29,7 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Company $company)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Company $company)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Company $company)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Company $company)
-    {
-        //
+        CompanyServices::create($request->except('_token'));
+        return view('pages.dashboard');
     }
 }
