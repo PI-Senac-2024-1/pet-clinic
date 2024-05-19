@@ -71,8 +71,8 @@ class UserProfileController extends Controller
                     'location' => 'Goiania, Go',
                     'category' => 'Pet Shop',
                     'comments' => [
-                        ['user' => 'Mary', 'text' => 'Great selection of pet products!'],
-                        ['user' => 'Jake', 'text' => 'The pet shop staff was friendly and helpful.'],
+                        ['user' => 'Mary', 'text' => 'Grande seleção de produtos para animais de estimação!'],
+                        ['user' => 'Jake', 'text' => 'A equipe do pet shop foi simpática e prestativa.'],
                     ],
                 ],
                 [
@@ -84,9 +84,9 @@ class UserProfileController extends Controller
                     'location' => 'Goiania, Go',
                     'category' => 'Pet Shop',
                     'comments' => [
-                        ['user' => 'Carol', 'text' => 'Great service! My pet loved it.'],
-                        ['user' => 'John', 'text' => 'Very friendly staff and clean environment.'],
-                        ['user' => 'Emily', 'text' => 'Highly recommended for pet owners.'],
+                        ['user' => 'Carol', 'text' => 'Ótimo serviço! Meu animal de estimação adorou.'],
+                        ['user' => 'John', 'text' => 'Pessoal muito simpático e ambiente limpo.'],
+                        ['user' => 'Emily', 'text' => 'Altamente recomendado para donos de animais de estimação.'],
                     ],
                 ],
                 [
@@ -98,8 +98,8 @@ class UserProfileController extends Controller
                     'location' => 'Goiania, Go',
                     'category' => 'Veterinarian',
                     'comments' => [
-                        ['user' => 'Sarah', 'text' => 'My pet had a great experience with the veterinarian!'],
-                        ['user' => 'David', 'text' => 'The staff was very caring and knowledgeable.'],
+                        ['user' => 'Sarah', 'text' => 'Meu animal de estimação teve uma ótima experiência com o veterinário!'],
+                        ['user' => 'David', 'text' => 'A equipe foi muito atenciosa e experiente.'],
                     ],
                 ],
                 [
