@@ -82,7 +82,13 @@
                                         @error('city') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
                                     </div>
                                 </div>
-
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="state" class="form-control-label">Estado</label>
+                                        <input class="form-control" type="text" name="state" id="state" value="{{ old('state') }}" required readonly>
+                                        @error('state') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
+                                    </div>
+                                </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="zipcode" class="form-control-label">CEP</label>

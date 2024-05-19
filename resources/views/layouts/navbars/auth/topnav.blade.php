@@ -13,7 +13,7 @@
             <div class="ms-md-auto pe-md-3 d-flex align-items-center">
                 <div class="input-group">
                     <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
-                    <input type="text" class="form-control" id="searchInput" placeholder="buscar">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Search by name...">
                 </div>
             </div>
             <ul class="navbar-nav  justify-content-end">
@@ -22,7 +22,7 @@
                         @csrf
                         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link text-white font-weight-bold px-0">
                             <i class="fa fa-user me-sm-1"></i>
-                            <span class="d-sm-inline d-none">Sair</span>
+                            <span class="d-sm-inline d-none">Log out</span>
                         </a>
                     </form>
                 </li>
