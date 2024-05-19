@@ -39,7 +39,7 @@
         <div class="modal-dialog" style="max-width:800px">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="serviceModalLabel">Detalhes dos Serviços</h5>
+                    <h5 class="modal-title" id="serviceModalLabel">Detalhes</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -54,8 +54,7 @@
     </div>
 
     <div class="row mt-4">
-        <h2 class="display-5 mt-6 mb-4"> <strong> Mais Serviços </strong></h2>
-
+        <h2 class="display-5 mt-6 mb-4"> <strong> Serviços Bem Avaliados </strong></h2>
         @foreach($topRatedServices as $key => $service)
         <div class="col-md-4 pb-4 service-card {{ $service['category'] }}">
             <div class="card card-profile" onclick="openModal(this, <?php echo htmlspecialchars(json_encode($service), ENT_QUOTES, 'UTF-8'); ?>)">
@@ -159,7 +158,7 @@
             </div>
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Review" aria-describedby="button-addon4">
-                <button type="button" class="btn bg-gradient-warning" style="margin: 0">Submit your Review</button>
+                <button type="button" class="btn bg-gradient-warning" style="margin: 0">Adicionar review</button>
             </div>
         `;
         var modal = new bootstrap.Modal(document.getElementById('serviceModal'));
