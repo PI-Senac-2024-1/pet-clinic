@@ -87,7 +87,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="district" class="form-control-label">Estado</label>
+                                    <label for="district" class="form-control-label">Bairro</label>
                                     <input class="form-control" type="text" name="district" id="district" value="{{ old('district', !empty($user->adress) ? $user->adress->district : '') }}" required readonly>
                                     @error('district') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
                                 </div>
