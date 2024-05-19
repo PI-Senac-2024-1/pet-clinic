@@ -1,84 +1,118 @@
-## Como iniciar o projeto:
-
-1 - Duplicar o arquivo .env.example;
-
-2 - Renomear o arquivo duplicado para .env;
-
-3 - Executar o comando "php artisan key:generate";
-
-4 - Criar a base de dados "pet_clinic" no MySQL;
-
-5 - Executar o comando "composer install" no terminal (Se for Laragon usar o terminal que vem com ele) DENTRO DA PASTA DO PROJETO;
-
-6 - Executar o comando "php artisan migrate --seed";
-
-7 - Executar o comando "php artisan serve" (este comando inicia o servidor interno do Laravel).
+<img align="right" alt="logo-compass" height="100" src="public/img/apple-icon.png"> 
 
 
+# Projeto Integrador - PetClinic Finder
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+  PetClinic Finder -Encontre Atendimento Veterinário em sua Região. 
+  O projeto visa o desenvolvimento de uma aplicação que facilite o acesso dos proprietários de animais de estimação a serviços veterinários de qualidade em sua cidade. 
+  A plataforma permite que os clientes se cadastrem e encontrem facilmente médicos veterinários, clínicas e hospitais veterinários cadastrados no sistema, filtrando por especialidade e localização.
 
+## Tópicos
+   * [Sobre o projeto](#sobre-o-projeto)
+   * [O projeto PetClinic Finder](#o-projeto-PetClinic Finder)
+   * [Instalando o projeto](#instalando-o-projeto)
+      * [Pré-requisitos](#pré-requisitos)
+      * [Preparando o ambiente](#preparando-o-ambiente)
+   * [Executando o projeto](#executando-o-projeto)
+      * [Passos iniciais após clonar o repositório](#passos-iniciais-após-clonar-o-repositório)
+      * [Criando nova branch para desenvolvimento](#criando-nova-branch-para-desenvolvimento)  
+   * [Estrutura Conceitual Externa](#estrutura-conceitual-externa)
+   * [Tecnologias Utilizadas](#tecnologias-utilizadas)
+   * [Autores](#autores)
+
+## Sobre o projeto 
+
+Apresentado ao Centro Universitário Senac, como exigência parcial para obtenção de aprovação na disciplina Projeto Integrador v, do curso de Análise e Desenvolvimento de Sistemas.
+
+## O projeto PetClinic Finder
+
+<h3 align="center">Login</h3>
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<img alt="menu" height="400" src="public/img/login.png">
+<p align="center">Entrar com e-mail de acesso e senha.</p>
 </p>
 
-## About Laravel
+<h3 align="center">Dasboard</h3>
+<p align="center">
+<img alt="menu" height="400" src="public/img/dashboard.png">
+<p align="center"> Nesta página é possível realizar buscas pelos profissionais, hospitais e petshops mais próximos de você.</p>
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<h3 align="center">Editar usuário</h3>
+<p align="center">
+<img alt="menu" height="400" src="public/img/editar usuario.png">
+<p align="center">Aqui o usuário consegue editar seus dados pessoais e da conta.</p>
+</p> 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<h3 align="center">Cadastrar Empresa</h3>
+<p align="center">
+<img alt="menu" height="400" src="public/img/cadastro de empresa.png">
+<p align="center">Nesta página é possivel cadastrar um serviço ou empresa.</p>
+</p>
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<h3 align="center">Card de avaliações</h3>
+<p align="center">
+<img alt="menu" height="400" src="public/img/tela de avaliação.png">
+<p align="center">Através das avaliações os usuários podem escolher os serviços oferecidos.</p>
+</p> 
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Instalando o projeto 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Pré-requisitos 
 
-## Laravel Sponsors
+- <a href='https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.4/xampp-windows-x64-8.2.4-0-VS16-installer.exe'>Xampp</a>: pacote que contém os componentes MySQL e PHP;
+- <a href='https://getcomposer.org/Composer-Setup.exe'>Composer</a>: ferramenta de gerenciamento de dependências em PHP;
+- <a href='https://www.heidisql.com/installers/HeidiSQL_12.5.0.6677_Setup.exe'>HeidiSQL</a>: utilizado para acessar o banco de dados.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Preparando o ambiente 
 
-### Premium Partners
+1. Instale o Xampp;
+2. Instale o Composer adicionando o PHP no patch do sistema operacional;
+3. Instale o HeidiSQL.
+> *Atenção*: para executar o Xampp é necessário executá-lo como administrador do sistema.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## Executando o projeto 
 
-## Contributing
+### Passos iniciais após clonar o repositório
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. Renomeie o arquivo '.env.example' para '.env';
+2. Execute o comando ```composer install```;
+3. Configure os dados do banco de dados dentro de '.env';
+4. Execute o comando ```php artisan key:generate```;
+5. Execute o comando ```php artisan migrate```;
+6. Inicie o projeto através do comando ```php artisan serve```.
 
-## Code of Conduct
+### Criando nova branch para desenvolvimento
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. Verifique a sua branch atual utilizando o comando ```git branch```;
+2. Na branch main, use o comando  ```git checkout -b <nome_da_branch/#numero_da_issue_aberta>```.
+<br> **Exemplo**: ```git checkout -b anotso/#1``` <br>
+3. Use o comando ```git checkout main```; 
+4. Na branch main, execute o ```git pull origin main``` **antes de iniciar o desenvolvimento de qualquer nova atividade**.
+> Caso não exista issue aberta no repositório do projeto é só cria-lá. Caso seja destinada para um outro integrante é só informar no grupo e passar a URL para a pessoa.
 
-## Security Vulnerabilities
+## Estrutura Conceitual Externa
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Foram desenvolvidos esboços com a ideia por trás do projeto, seguido pela fase escrita do <a href="https://docs.google.com/document/d/1m2EhhgLZO_s13yHRFUj9yRpd48kIsixteWzQSpkLH6U/edit#heading=h.cwnjb6nrl73l">Projeto Formal</a>. Com o uso da ferramenta Figma foi produzido um <a href="https://www.figma.com/design/Ly5DJGm8pCXOswr7nk8ZrL/PetClinic?node-id=7%3A16&t=dfagcNMjK5j2Acwl-1">Modelo Visual Interativo</a> a ser seguido no desenvolvimento de front end e para a produção técnica, foi utilizado múltiplos conhecimentos da equipe.
 
-## License
+## Tecnologias Utilizadas
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+PHP 8.2, Laravel v10, banco de dados MySQL v8, Bootstrap v5, Jquery v3.8 e Font Awesome 6.
+
+![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
+![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
+
+## Autores
+
+<a href="https://github.com/Adassalifer">Adassa Jeanneffer Lima Ferreira</a><br>
+<a href="https://github.com/carolinabranquinho/">Carolina Alves Branquinho</a>
+<a href="https://github.com/daimainardi/">Daiane Bovolini Mainardi</a>
+<a href="https://github.com/Anotso">Gracilliano Dos Anjos Carvalho</a><br>
+<a href="https://github.com/dori18/">Isadora Clara Silva da Costa</a>
+<a href="https://github.com/manoellasouza/">Manoella Souza</a>
+<a href="https://github.com/MRBr4bo/">Marcos Roberto Brabo</a>

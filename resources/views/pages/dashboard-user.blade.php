@@ -47,7 +47,7 @@
                     <div id="modalContent"></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                 </div>
             </div>
         </div>
@@ -55,7 +55,6 @@
 
     <div class="row mt-4">
         <h2 class="display-5 mt-6 mb-4"> <strong> Serviços Bem Avaliados </strong></h2>
-
         @foreach($topRatedServices as $key => $service)
         <div class="col-md-4 pb-4 service-card {{ $service['category'] }}">
             <div class="card card-profile" onclick="openModal(this, <?php echo htmlspecialchars(json_encode($service), ENT_QUOTES, 'UTF-8'); ?>)">
@@ -77,7 +76,7 @@
                             <div class="d-flex justify-content-center align-items-center">
                                 <div class="d-grid text-center mx-4">
                                     <span class="text-lg font-weight-bolder">{{ $service['reviews'] }}</span>
-                                    <span class="text-sm opacity-8">Reviews</span>
+                                    <span class="text-sm opacity-8">Avaliações</span>
                                 </div>
                                 <!-- Star icon for rating -->
                                 <div class="d-grid text-center">
