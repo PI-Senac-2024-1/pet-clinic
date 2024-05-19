@@ -68,11 +68,11 @@ class UserProfileController extends Controller
                     'avatar' => '/img/vet4.png',
                     'reviews' => 33,
                     'rating' => 4.7,
-                    'location' => 'Goiania, Go',
+                    'location' => 'Goiânia, GO',
                     'category' => 'Pet Shop',
                     'comments' => [
-                        ['user' => 'Mary', 'text' => 'Great selection of pet products!'],
-                        ['user' => 'Jake', 'text' => 'The pet shop staff was friendly and helpful.'],
+                        ['user' => 'Mary', 'text' => 'Ótima seleção de produtos para pets!'],
+                        ['user' => 'Jake', 'text' => 'A equipe do pet shop foi amigável e prestativa.'],
                     ],
                 ],
                 [
@@ -81,12 +81,12 @@ class UserProfileController extends Controller
                     'avatar' => '/img/vet5.png',
                     'reviews' => 65,
                     'rating' => 4.6,
-                    'location' => 'Goiania, Go',
+                    'location' => 'Goiânia, GO',
                     'category' => 'Pet Shop',
                     'comments' => [
-                        ['user' => 'Carol', 'text' => 'Great service! My pet loved it.'],
-                        ['user' => 'John', 'text' => 'Very friendly staff and clean environment.'],
-                        ['user' => 'Emily', 'text' => 'Highly recommended for pet owners.'],
+                        ['user' => 'Carol', 'text' => 'Ótimo serviço! Meu pet adorou.'],
+                        ['user' => 'John', 'text' => 'Equipe muito amigável e ambiente limpo.'],
+                        ['user' => 'Emily', 'text' => 'Altamente recomendado para donos de pets.'],
                     ],
                 ],
                 [
@@ -95,11 +95,11 @@ class UserProfileController extends Controller
                     'avatar' => '/img/vet2.jpg',
                     'reviews' => 88,
                     'rating' => 4.7,
-                    'location' => 'Goiania, Go',
-                    'category' => 'Veterinarian',
+                    'location' => 'Goiânia, GO',
+                    'category' => 'Veterinário',
                     'comments' => [
-                        ['user' => 'Sarah', 'text' => 'My pet had a great experience with the veterinarian!'],
-                        ['user' => 'David', 'text' => 'The staff was very caring and knowledgeable.'],
+                        ['user' => 'Sarah', 'text' => 'Meu pet teve uma ótima experiência com o veterinário!'],
+                        ['user' => 'David', 'text' => 'A equipe foi muito carinhosa e conhecedora.'],
                     ],
                 ],
                 [
@@ -108,12 +108,12 @@ class UserProfileController extends Controller
                     'avatar' => '/img/vet6.png',
                     'reviews' => 74,
                     'rating' => 4.5,
-                    'location' => 'Goiania, Go',
+                    'location' => 'Goiânia, GO',
                     'category' => 'Pet Shop',
                     'comments' => [
-                        ['user' => 'Alex', 'text' => 'I found everything I needed for my pet.'],
-                        ['user' => 'Emma', 'text' => 'Reasonable prices and good quality products.'],
-                        ['user' => 'Sophia', 'text' => 'My pet loves visiting this pet shop!'],
+                        ['user' => 'Alex', 'text' => 'Encontrei tudo o que precisava para meu pet.'],
+                        ['user' => 'Emma', 'text' => 'Preços razoáveis e produtos de boa qualidade.'],
+                        ['user' => 'Sophia', 'text' => 'Meu pet adora visitar este pet shop!'],
                     ],
                 ],
                 [
@@ -122,12 +122,12 @@ class UserProfileController extends Controller
                     'avatar' => '/img/vet1.jpg',
                     'reviews' => 91,
                     'rating' => 4.8,
-                    'location' => 'Goiania, Go',
-                    'category' => 'Veterinarian',
+                    'location' => 'Goiânia, GO',
+                    'category' => 'Veterinário',
                     'comments' => [
-                        ['user' => 'James', 'text' => 'I highly recommend this veterinarian for all pet owners.'],
-                        ['user' => 'Olivia', 'text' => 'The veterinarian provided excellent care for my pet.'],
-                        ['user' => 'William', 'text' => 'I am very satisfied with the service received.'],
+                        ['user' => 'James', 'text' => 'Recomendo muito este veterinário para todos os donos de pets.'],
+                        ['user' => 'Olivia', 'text' => 'O veterinário forneceu um excelente cuidado para meu pet.'],
+                        ['user' => 'William', 'text' => 'Estou muito satisfeito com o serviço recebido.'],
                     ],
                 ],
                 [
@@ -136,17 +136,17 @@ class UserProfileController extends Controller
                     'avatar' => '/img/vet3.png',
                     'reviews' => 47,
                     'rating' => 4.8,
-                    'location' => 'Goiania, Go',
+                    'location' => 'Goiânia, GO',
                     'category' => 'Hospital',
                     'comments' => [
-                        ['user' => 'Sophie', 'text' => 'The pet hospital provided exceptional care for my pet.'],
-                        ['user' => 'Benjamin', 'text' => 'The staff was efficient and compassionate.'],
-                        ['user' => 'Lucas', 'text' => 'I am grateful for the prompt service received at the hospital.'],
-                        ['user' => 'Charlotte', 'text' => 'My pet received the best treatment possible.'],
-                        ['user' => 'Jackson', 'text' => 'Highly recommended for any pet emergencies.'],
+                        ['user' => 'Sophie', 'text' => 'O hospital para pets forneceu um cuidado excepcional para meu pet.'],
+                        ['user' => 'Benjamin', 'text' => 'A equipe foi eficiente e compassiva.'],
+                        ['user' => 'Lucas', 'text' => 'Sou grato pelo serviço rápido recebido no hospital.'],
+                        ['user' => 'Charlotte', 'text' => 'Meu pet recebeu o melhor tratamento possível.'],
+                        ['user' => 'Jackson', 'text' => 'Altamente recomendado para qualquer emergência com pets.'],
                     ],
                 ],
             ]
-        ]);
+        ]);        
     }
 }
